@@ -17,14 +17,14 @@ jobs:
 
      - uses: docker/build-push-action@v7
        with:
-         content: ./frontend
+         context: ./frontend
          push: true
          tags: |
            ${{ secrets.DOCKERHUB_USERNAME }}/frontend:latest     
 
      - uses: docker/build-push-action@v7
        with:
-         content: ./backend
+         context: ./backend
          push: true
          tags: |
            ${{ secrets.DOCKERHUB_USERNAME }}/backend:latest           
