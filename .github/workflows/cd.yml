@@ -23,8 +23,8 @@ jobs:
            cd ~/github-actions-kubernetes-masterclass
            git pull origin main
            if [ ! -f .env ]; then
-            echo "ERROR: ~/github-actions-kubernetes-masterclass/.env is missing. create it once with DOCKERHUB_USERNAME and DB credentials." 
-             exit 1
+            echo "ERROR:~/github-actions-kubernetes-masterclass/.env is missing. create it once with DOCKERHUB_USERNAME and DB credentials." 
+            exit 1
            fi
            docker compose pull
            docker compose up -d --build
