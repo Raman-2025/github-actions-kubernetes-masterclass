@@ -17,7 +17,7 @@ jobs:
          key: ${{ secrets.EC2_SSH_KEY }}
          script: |
            if [ ! -d ~/github-actions-kubernetes-masterclass ]; then
-             git clone ${{github.server.url}}/${{github.repository}}.git ~/github-actions-kubernetes-masterclass
+             git clone ${{github.server_url}}/${{github.repository}}.git ~/github-actions-kubernetes-masterclass
            fi
            cd ~/github-actions-kubernetes-masterclass
            git pull origin main
